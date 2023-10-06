@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Filmoteca</string>
+
+    <string name="creator">Created by Dianelys Saldaña</string>
+    <string name="web">Go to website</string>
+    <string name="support">Obtain support</string>
+    <string name="back">Go back</string>
+
+    <string name="toast">Functionality not implemented yet</string>
+    <string name="contentDescr">Profile picture</string>
+</resources>
