@@ -9,4 +9,23 @@
 
     <string name="toast">Functionality not implemented yet</string>
     <string name="contentDescr">Profile picture</string>
+    <string name="chooser">Complete action using</string>
+
+    <string name="p1">See movie A</string>
+    <string name="p2">See movie B</string>
+    <string name="about">About</string>
+    <string name="p1extra">Movie A</string>
+    <string name="p2extra">Movie B</string>
+
+    <string name="details">Movie details</string>
+    <string name="related">See related movies</string>
+    <string name="edit">Edit movie</string>
+    <string name="main">Go back to main movie</string>
+    <string name="p3extra">Movie C</string>
+
+    <string name="editing">Editing movie</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="edited">Film edited successfully</string>
+    <string name="canceled">Edit canceled</string>
 </resources>
