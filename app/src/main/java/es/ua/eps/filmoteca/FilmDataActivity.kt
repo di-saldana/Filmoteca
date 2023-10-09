@@ -1,11 +1,10 @@
 package es.ua.eps.filmoteca
 
-import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import es.ua.eps.filmoteca.databinding.ActivityFilmDataBinding
@@ -29,7 +28,7 @@ class FilmDataActivity : AppCompatActivity() {
         // setContentView(R.layout.activity_film_data)
 
         bindings = ActivityFilmDataBinding.inflate(layoutInflater)
-        bindings.resultTextView.visibility = View.GONE
+//        bindings.result.visibility = View.GONE
 
         with(bindings) {
             setContentView(root)
@@ -38,10 +37,15 @@ class FilmDataActivity : AppCompatActivity() {
             val title = extraIntent.getStringExtra(EXTRA_FILM_TITLE)
             details.text = title
 
-            related.setOnClickListener {
-                val miIntent = Intent(this@FilmDataActivity, FilmDataActivity::class.java)
-                miIntent.putExtra(EXTRA_FILM_TITLE, getString(R.string.p3extra))
-                startActivity(miIntent)
+            imdb.setOnClickListener {
+                val viewIntent = Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://www.imdb.com/title/tt0449059/"))
+
+                val chooser = Intent.createChooser(viewIntent, "@string/chooser")
+
+                if (viewIntent.resolveActivity(packageManager) != null) {
+                    startActivity(chooser)
+                }
             }
 
             edit.setOnClickListener {
@@ -69,17 +73,17 @@ class FilmDataActivity : AppCompatActivity() {
         @Suppress("DEPRECATION")
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == CODIGO_ACTIVIDAD_A) {
-            if (resultCode == Activity.RESULT_OK) {
-                // Update the text view if the user pressed "Save"
-                bindings.resultTextView.text = getString(R.string.edited)
-                bindings.resultTextView.visibility = View.VISIBLE
-            }
-            else if (resultCode == Activity.RESULT_CANCELED) {
-                // Update the text view if the user pressed "Cancel"
-                bindings.resultTextView.text = getString(R.string.canceled)
-                bindings.resultTextView.visibility = View.VISIBLE
-            }
-        }
+//        if (requestCode == CODIGO_ACTIVIDAD_A) {
+//            if (resultCode == Activity.RESULT_OK) {
+//                // Update the text view if the user pressed "Save"
+//                bindings.result.text = getString(R.string.edited)
+//                bindings.result.visibility = View.VISIBLE
+//            }
+//            else if (resultCode == Activity.RESULT_CANCELED) {
+//                // Update the text view if the user pressed "Cancel"
+//                bindings.result.text = getString(R.string.canceled)
+//                bindings.result.visibility = View.VISIBLE
+//            }
+//        }
     }
 }

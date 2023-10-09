@@ -29,6 +29,7 @@
         android:theme="@style/Theme.Filmoteca">
         <activity
             android:name=".FilmEditActivity"
+            android:configChanges="orientation|screenSize"
             android:exported="false" />
         <activity
             android:name=".FilmDataActivity"

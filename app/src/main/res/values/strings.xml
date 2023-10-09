@@ -28,4 +28,22 @@
     <string name="cancel">Cancel</string>
     <string name="edited">Film edited successfully</string>
     <string name="canceled">Edit canceled</string>
+
+    <string name="p1Title">Little Miss Sunshine</string>
+    <string name="p1Dir">Director: Jonathan Dayton</string>
+    <string name="yearText">Year: 2006</string>
+    <string name="genreText">Genre: Comedy, Drama</string>
+    <string name="formatText">Format: HD</string>
+    <string name="imdbText">IMDB</string>
+
+    <string name="takePhoto">Take photo</string>
+    <string name="selectImg">Select image</string>
+    <string name="titleHint">Movie title</string>
+    <string name="dirHint">Director\'s name</string>
+    <string name="yearHint">Release year</string>
+    <string name="imdbHint">IMDB link</string>
+    <string name="commentsHint">Comments</string>
+
+    <string name="chooseGenre">Choose the genre</string>
+    <string name="chooseFormat">Choose the format</string>
 </resources>

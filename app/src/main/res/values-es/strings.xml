@@ -28,4 +28,22 @@
     <string name="cancel">Cancelar</string>
     <string name="edited">Película editada exitosamente</string>
     <string name="canceled">Edición cancelada</string>
+
+    <string name="p1Title">Pequeña Miss Sunshine</string>
+    <string name="p1Dir">Director: Jonathan Dayton</string>
+    <string name="yearText">Año: 2006</string>
+    <string name="genreText">Género: Comedia, Drama</string>
+    <string name="formatText">Formato: HD</string>
+    <string name="imdbText">IMDB</string>
+
+    <string name="takePhoto">Toma fotografía</string>
+    <string name="selectImg">Selecciona imagen</string>
+    <string name="titleHint">Título de la película</string>
+    <string name="dirHint">Nombre del director</string>
+    <string name="yearHint">Año de estreno</string>
+    <string name="imdbHint">Enlace a IMDB</string>
+    <string name="commentsHint">Comentarios</string>
+
+    <string name="chooseGenre">Elige el género</string>
+    <string name="chooseFormat">Elige el formato</string>
 </resources>

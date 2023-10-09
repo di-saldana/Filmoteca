@@ -10,6 +10,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:padding="16dp">
 
     <ImageView
@@ -103,21 +104,21 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
-            android:layout_marginBottom="200dp"
             android:text="@string/main" />
-<!--        android:layout_below="@+id/imdb"-->
-<!--        android:layout_toEndOf="@+id/poster"-->
+        <!--        android:layout_below="@+id/imdb"-->
+        <!--        android:layout_toEndOf="@+id/poster"-->
 
 
         <Button
             android:id="@+id/edit"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="4dp"
+            android:layout_marginBottom="200dp"
             android:text="@string/edit" />
-<!--        android:layout_below="@+id/main"-->
-<!--        android:layout_toEndOf="@+id/poster"-->
+        <!--        android:layout_below="@+id/main"-->
+        <!--        android:layout_toEndOf="@+id/poster"-->
     </LinearLayout>
 
 </RelativeLayout>

@@ -1,0 +1,140 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/posterIcon"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/poster"
+            android:contentDescription="@string/contentDescr"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/takePhotoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:text="@string/takePhoto" />
+
+        <Button
+            android:id="@+id/selectImgButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_margin="7dp"
+            android:text="@string/selectImg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <EditText
+            android:id="@+id/movieTitleEdit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/titleHint"
+            android:autofillHints="@string/titleHint"
+            android:inputType="textCapWords"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/directorEdit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/dirHint"
+            android:autofillHints="@string/dirHint"
+            android:inputType="textCapWords"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/yearEdit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/yearHint"
+            android:autofillHints="@string/yearHint"
+            android:inputType="number"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp" />
+
+        <Spinner
+            android:id="@+id/genreSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:entries="@array/genre_options"
+            android:orientation="horizontal"
+            android:prompt="@string/chooseGenre"/>
+
+        <Spinner
+            android:id="@+id/formatSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:entries="@array/format_options"
+            android:orientation="horizontal"
+            android:prompt="@string/chooseFormat" />
+
+        <EditText
+            android:id="@+id/imdbLink"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/imdbHint"
+            android:autofillHints="@string/imdbHint"
+            android:inputType="textUri"
+            android:orientation="horizontal"
+            android:layout_margin="8dp" />
+
+        <EditText
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/commentsHint"
+            android:autofillHints="@string/commentsHint"
+            android:layout_margin="8dp"
+            android:lines="2"
+            android:orientation="horizontal"
+            android:inputType="textMultiLine" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="@string/save"
+                android:layout_margin="7dp"/>
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginBottom="200dp"
+                android:layout_margin="7dp"
+                android:text="@string/cancel"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
