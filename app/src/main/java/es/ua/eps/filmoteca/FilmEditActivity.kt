@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import es.ua.eps.filmoteca.databinding.ActivityFilmEditBinding
 
 class FilmEditActivity : AppCompatActivity() {
@@ -29,11 +30,23 @@ class FilmEditActivity : AppCompatActivity() {
             }
 
             cancel.setOnClickListener {
-//                val resultIntent = Intent(this, FilmDataActivity::class.java)
+                // val resultIntent = Intent(this, FilmDataActivity::class.java)
                 val resultIntent = Intent()
                 setResult(Activity.RESULT_CANCELED, resultIntent)
                 finish()
             }
+
+            takePhotoButton.setOnClickListener{
+                val resultIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+                startActivity(resultIntent)
+            }
+
+            selectImgButton.setOnClickListener {
+                val resultIntent = Intent(MediaStore.ACTION_PICK_IMAGES)
+                startActivity(resultIntent)
+            }
+
         }
     }
+
 }

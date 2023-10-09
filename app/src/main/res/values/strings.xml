@@ -11,16 +11,16 @@
     <string name="contentDescr">Profile picture</string>
     <string name="chooser">Complete action using</string>
 
-    <string name="p1">See movie A</string>
-    <string name="p2">See movie B</string>
+    <string name="p1">See Little Miss Sunshine</string>
+    <string name="p2">See Booksmart</string>
     <string name="about">About</string>
-    <string name="p1extra">Movie A</string>
-    <string name="p2extra">Movie B</string>
+    <string name="p1extra">Little Miss Sunshine</string>
+    <string name="p2extra">Booksmart</string>
 
     <string name="details">Movie details</string>
     <string name="related">See related movies</string>
     <string name="edit">Edit movie</string>
-    <string name="main">Go back to main movie</string>
+    <string name="main">Go to main movie</string>
     <string name="p3extra">Movie C</string>
 
     <string name="editing">Editing movie</string>
@@ -31,10 +31,17 @@
 
     <string name="p1Title">Little Miss Sunshine</string>
     <string name="p1Dir">Director: Jonathan Dayton</string>
-    <string name="yearText">Year: 2006</string>
-    <string name="genreText">Genre: Comedy, Drama</string>
-    <string name="formatText">Format: HD</string>
-    <string name="imdbText">IMDB</string>
+    <string name="p1YearText">Year: 2006</string>
+    <string name="p1GenreText">Genre: Comedy, Drama</string>
+    <string name="p1FormatText">Format: HD</string>
+    <string name="p1ImdbText">IMDB</string>
+
+    <string name="p2Title">Little Miss Sunshine</string>
+    <string name="p2Dir">Director: Jonathan Dayton</string>
+    <string name="p2YearText">Year: 2006</string>
+    <string name="p2GenreText">Genre: Comedy, Drama</string>
+    <string name="p2FormatText">Format: HD</string>
+    <string name="p2ImdbText">IMDB</string>
 
     <string name="takePhoto">Take photo</string>
     <string name="selectImg">Select image</string>

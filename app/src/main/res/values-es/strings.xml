@@ -11,17 +11,17 @@
     <string name="contentDescr">Imagen de perfil</string>
     <string name="chooser">Completa la acción usando</string>
 
-    <string name="p1">Ver película A</string>
-    <string name="p2">Ver película B</string>
+    <string name="p1">Ver Pequeña Miss Sunshine</string>
+    <string name="p2">Ver La noche de las nerds</string>
     <string name="about">Acerca de</string>
-    <string name="p1extra">Película A</string>
-    <string name="p2extra">Película B</string>
+    <string name="p1extra">Pequeña Miss Sunshine</string>
+    <string name="p2extra">La noche de las nerds</string>
     <string name="p3extra">Película C</string>
 
     <string name="details">Datos de la película</string>
     <string name="related">Ver películas relacionadas</string>
     <string name="edit">Editar película</string>
-    <string name="main">Volver a película principal</string>
+    <string name="main">Ir a película principal</string>
 
     <string name="editing">Editando película</string>
     <string name="save">Guardar</string>
@@ -31,10 +31,17 @@
 
     <string name="p1Title">Pequeña Miss Sunshine</string>
     <string name="p1Dir">Director: Jonathan Dayton</string>
-    <string name="yearText">Año: 2006</string>
-    <string name="genreText">Género: Comedia, Drama</string>
-    <string name="formatText">Formato: HD</string>
-    <string name="imdbText">IMDB</string>
+    <string name="p1YearText">Año: 2006</string>
+    <string name="p1GenreText">Género: Comedia, Drama</string>
+    <string name="p1FormatText">Formato: HD</string>
+    <string name="p1ImdbText">IMDB</string>
+
+    <string name="p2Title">La noche de las nerds</string>
+    <string name="p2Dir">Director: Jonathan Dayton</string>
+    <string name="p2YearText">Year: 2006</string>
+    <string name="p2GenreText">Genre: Comedy, Drama</string>
+    <string name="p2FormatText">Format: HD</string>
+    <string name="p2ImdbText">IMDB</string>
 
     <string name="takePhoto">Toma fotografía</string>
     <string name="selectImg">Selecciona imagen</string>

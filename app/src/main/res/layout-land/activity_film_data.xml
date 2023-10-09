@@ -55,7 +55,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:layout_toEndOf="@+id/poster"
-        android:text="@string/yearText"
+        android:text="@string/p1YearText"
         android:textSize="14sp" />
 
     <TextView
@@ -66,7 +66,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:layout_toEndOf="@+id/poster"
-        android:text="@string/genreText"
+        android:text="@string/p1GenreText"
         android:textSize="14sp" />
 
     <TextView
@@ -77,7 +77,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:layout_toEndOf="@+id/poster"
-        android:text="@string/formatText"
+        android:text="@string/p1FormatText"
         android:textSize="14sp" />
 
     <Button
@@ -88,7 +88,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:layout_toEndOf="@+id/poster"
-        android:text="@string/imdbText" />
+        android:text="@string/p1ImdbText" />
 
     <LinearLayout
         android:id="@+id/buttonLayout"
