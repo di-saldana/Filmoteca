@@ -21,8 +21,8 @@
         android:layout_marginTop="40dp"
         android:contentDescription="@string/contentDescr"
         android:scaleType="centerCrop"
-        android:src="@drawable/lms"
-        app:srcCompat="@drawable/lms" />
+        android:src="@drawable/lms_poster"
+        app:srcCompat="@drawable/lms_poster" />
 
     <LinearLayout
         android:id="@+id/boxLayout"

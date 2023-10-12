@@ -22,8 +22,8 @@
         android:layout_marginTop="16dp"
         android:scaleType="centerCrop"
         android:contentDescription="@string/contentDescr"
-        android:src="@drawable/lms"
-        app:srcCompat="@drawable/lms" />
+        android:src="@drawable/lms_poster"
+        app:srcCompat="@drawable/lms_poster" />
 
     <TextView
         android:id="@+id/details"

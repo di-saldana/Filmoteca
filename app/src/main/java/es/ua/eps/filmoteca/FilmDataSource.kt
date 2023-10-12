@@ -4,12 +4,11 @@ object FilmDataSource {
     val films: MutableList<Film> = mutableListOf<Film>()
 
     init {
-        // Add movies to the list
         films.add(Film().apply {
             title = "Little Miss Sunshine"
             director = "Jonathan Dayton, Valerie Faris"
-//            imageResId = R.drawable.little_miss_sunshine_poster
-            comments = "A great comedy-drama!"
+            imageResId = R.drawable.lms_poster
+            comments = ""
             format = Film.FORMAT_DVD
             genre = Film.GENRE_COMEDY
             imdbUrl = "https://www.imdb.com/title/tt0449059/"
@@ -19,8 +18,8 @@ object FilmDataSource {
         films.add(Film().apply {
             title = "Booksmart"
             director = "Olivia Wilde"
-//            imageResId = R.drawable.booksmart_poster
-            comments = "A hilarious coming-of-age film."
+            imageResId = R.drawable.booksmart_poster
+            comments = ""
             format = Film.FORMAT_BLURAY
             genre = Film.GENRE_COMEDY
             imdbUrl = "https://www.imdb.com/title/tt1489887/"
@@ -30,8 +29,8 @@ object FilmDataSource {
         films.add(Film().apply {
             title = "Interstellar"
             director = "Christopher Nolan"
-//            imageResId = R.drawable.interstellar_poster
-            comments = "A mind-bending space adventure."
+            imageResId = R.drawable.interstellar_poster
+            comments = ""
             format = Film.FORMAT_DIGITAL
             genre = Film.GENRE_SCIFI
             imdbUrl = "https://www.imdb.com/title/tt0816692/"
@@ -41,8 +40,8 @@ object FilmDataSource {
         films.add(Film().apply {
             title = "Eternal Sunshine of the Spotless Mind"
             director = "Michel Gondry"
-//            imageResId = R.drawable.eternal_sunshine_poster
-            comments = "A unique and beautiful romance."
+            imageResId = R.drawable.eternal_sunshine_poster
+            comments = ""
             format = Film.FORMAT_DVD
             genre = Film.GENRE_DRAMA
             imdbUrl = "https://www.imdb.com/title/tt0338013/"
@@ -52,8 +51,8 @@ object FilmDataSource {
         films.add(Film().apply {
             title = "Aftersun"
             director = "Carla Simón"
-//            imageResId = R.drawable.aftersun_poster
-            comments = "A touching Spanish drama."
+            imageResId = R.drawable.aftersun_poster
+            comments = ""
             format = Film.FORMAT_BLURAY
             genre = Film.GENRE_DRAMA
             imdbUrl = "https://www.imdb.com/title/tt1819579/"
@@ -63,8 +62,8 @@ object FilmDataSource {
         films.add(Film().apply {
             title = "Shrek"
             director = "Andrew Adamson, Vicky Jenson"
-//            imageResId = R.drawable.shrek_poster
-            comments = "An animated fairy tale comedy."
+            imageResId = R.drawable.shrek_poster
+            comments = ""
             format = Film.FORMAT_DVD
             genre = Film.GENRE_COMEDY
             imdbUrl = "https://www.imdb.com/title/tt0126029/"
@@ -74,8 +73,8 @@ object FilmDataSource {
         films.add(Film().apply {
             title = "Everything, everywhere all at once"
             director = "Daniel Kwan, Daniel Scheinert"
-//            imageResId = R.drawable.everything_poster
-            comments = "A surreal and mind-bending experience."
+            imageResId = R.drawable.eeao_poster
+            comments = ""
             format = Film.FORMAT_DIGITAL
             genre = Film.GENRE_SCIFI
             imdbUrl = "https://www.imdb.com/title/tt10366206/"
@@ -85,8 +84,8 @@ object FilmDataSource {
         films.add(Film().apply {
             title = "Little Women"
             director = "Greta Gerwig"
-//            imageResId = R.drawable.little_women_poster
-            comments = "A timeless classic brought to life."
+            imageResId = R.drawable.little_women_poster
+            comments = ""
             format = Film.FORMAT_BLURAY
             genre = Film.GENRE_DRAMA
             imdbUrl = "https://www.imdb.com/title/tt3281548/"
@@ -96,8 +95,8 @@ object FilmDataSource {
         films.add(Film().apply {
             title = "Frances Ha"
             director = "Noah Baumbach"
-//            imageResId = R.drawable.frances_ha_poster
-            comments = "A charming black-and-white indie film."
+            imageResId = R.drawable.frances_ha_poster
+            comments = ""
             format = Film.FORMAT_DIGITAL
             genre = Film.GENRE_COMEDY
             imdbUrl = "https://www.imdb.com/title/tt2347569/"
@@ -107,10 +106,10 @@ object FilmDataSource {
         films.add(Film().apply {
             title = "Monster's Inc"
             director = "Pete Docter, David Silverman, Lee Unkrich"
-            // imageResId = R.drawable.monsters_inc_poster
-            comments = "A heartwarming animated adventure."
+            imageResId = R.drawable.monsters_inc_poster
+            comments = ""
             format = Film.FORMAT_BLURAY
-             genre = Film.GENRE_COMEDY
+            genre = Film.GENRE_COMEDY
             imdbUrl = "https://www.imdb.com/title/tt0198781/"
             year = 2001
         })
