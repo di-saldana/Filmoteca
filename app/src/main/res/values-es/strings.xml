@@ -21,7 +21,7 @@
     <string name="details">Datos de la película</string>
     <string name="related">Ver películas relacionadas</string>
     <string name="edit">Editar película</string>
-    <string name="main">Ir a película principal</string>
+    <string name="main">Menú principal</string>
 
     <string name="editing">Editando película</string>
     <string name="save">Guardar</string>

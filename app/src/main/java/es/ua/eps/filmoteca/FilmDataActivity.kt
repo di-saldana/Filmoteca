@@ -2,88 +2,58 @@ package es.ua.eps.filmoteca
 
 import android.content.Intent
 import android.net.Uri
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.result.ActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
 import es.ua.eps.filmoteca.databinding.ActivityFilmDataBinding
 
 class FilmDataActivity : AppCompatActivity() {
 
     private lateinit var bindings : ActivityFilmDataBinding
-    private val CODIGO_ACTIVIDAD_A = 1
 
     companion object {
         const val EXTRA_FILM_TITLE = "EXTRA_FILM_TITLE"
     }
 
-    private val startForResult =
-        registerForActivityResult(
-            ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
-            onActivityResult(CODIGO_ACTIVIDAD_A, result.resultCode, result.data)
-        }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // setContentView(R.layout.activity_film_data)
-
         bindings = ActivityFilmDataBinding.inflate(layoutInflater)
-//        bindings.result.visibility = View.GONE
-
         with(bindings) {
             setContentView(root)
 
             val extraIntent = intent
-            val title = extraIntent.getStringExtra(EXTRA_FILM_TITLE)
-            details.text = title
+            val movieIndex = extraIntent.getIntExtra(EXTRA_FILM_TITLE, 0)
+            val movie = FilmDataSource.films[movieIndex]
+
+            if (movieIndex != -1) {
+                details.text = movie.title
+                director.text = movie.director
+                year.text = movie.year.toString()
+                poster.setImageResource(movie.imageResId)
+            }
 
             imdb.setOnClickListener {
-                val viewIntent = Intent(Intent.ACTION_VIEW,
-                    Uri.parse("https://www.imdb.com/title/tt0449059/"))
+                val imdbUrl = movie.imdbUrl
 
-                val chooser = Intent.createChooser(viewIntent, "@string/chooser")
-
-                if (viewIntent.resolveActivity(packageManager) != null) {
-                    startActivity(chooser)
+                if (!imdbUrl.isNullOrEmpty()) {
+                    val viewIntent = Intent(Intent.ACTION_VIEW, Uri.parse(imdbUrl))
+                    val chooser = Intent.createChooser(viewIntent, getString(R.string.chooser))
+                    if (viewIntent.resolveActivity(packageManager) != null) {
+                        startActivity(chooser)
+                    }
                 }
             }
 
             edit.setOnClickListener {
-                val miIntent = Intent(this@FilmDataActivity, FilmEditActivity::class.java)
-//                startActivity(miIntent)
-
-                if(Build.VERSION.SDK_INT >= 30) {
-                    startForResult.launch(miIntent)
-                }
-                else {
-                    @Suppress("DEPRECATION")
-                    startActivityForResult(miIntent, CODIGO_ACTIVIDAD_A)
-                }
+                val editIntent = Intent(this@FilmDataActivity, FilmEditActivity::class.java)
+                editIntent.putExtra(EXTRA_FILM_TITLE, movieIndex)
+                startActivity(editIntent)
             }
 
             main.setOnClickListener {
-                val miIntent = Intent(this@FilmDataActivity, FilmListActivity::class.java)
-                miIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-                startActivity(miIntent)
+                val mainIntent = Intent(this@FilmDataActivity, FilmListActivity::class.java)
+                mainIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                startActivity(mainIntent)
             }
         }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        @Suppress("DEPRECATION")
-        super.onActivityResult(requestCode, resultCode, data)
-
-//        if (requestCode == CODIGO_ACTIVIDAD_A) {
-//            if (resultCode == Activity.RESULT_OK) {
-//                // Update the text view if the user pressed "Save"
-//                bindings.result.text = getString(R.string.edited)
-//                bindings.result.visibility = View.VISIBLE
-//            }
-//            else if (resultCode == Activity.RESULT_CANCELED) {
-//                // Update the text view if the user pressed "Cancel"
-//                bindings.result.text = getString(R.string.canceled)
-//                bindings.result.visibility = View.VISIBLE
-//            }
-//        }
     }
 }
