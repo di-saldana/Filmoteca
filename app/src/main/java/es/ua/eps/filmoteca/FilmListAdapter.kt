@@ -8,7 +8,7 @@ import android.widget.TextView
 import es.ua.eps.filmoteca.Film
 import es.ua.eps.filmoteca.R
 
-class MovieListAdapter(context: Context, movies: List<Film>) : ArrayAdapter<Film>(context, R.layout.film_list_item, movies) {
+class FilmListAdapter(context: Context, movies: List<Film>) : ArrayAdapter<Film>(context, R.layout.film_list_item, movies) {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
         var view: View = convertView?: LayoutInflater.from(this.context)

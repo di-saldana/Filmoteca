@@ -10,4 +10,13 @@
         android:id="@+id/customListLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:id="@+id/movieListRV"-->
+<!--        android:scrollbars="vertical">-->
+<!--    </androidx.recyclerview.widget.RecyclerView>-->
+
 </androidx.constraintlayout.widget.ConstraintLayout>
