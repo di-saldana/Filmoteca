@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NavUtils
 import androidx.recyclerview.widget.RecyclerView
 import es.ua.eps.filmoteca.databinding.ActivityFilmListBinding
 
@@ -68,7 +69,6 @@ class FilmListActivity : AppCompatActivity() {
                 return true
             }
             R.id.action_about -> {
-                // Handle "About" menu item click
                 val intent = Intent(this@FilmListActivity, AboutActivity::class.java)
                 startActivity(intent)
                 return true

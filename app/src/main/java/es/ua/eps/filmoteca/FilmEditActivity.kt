@@ -6,6 +6,9 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.Menu
+import android.view.MenuItem
+import androidx.core.app.NavUtils
 import es.ua.eps.filmoteca.databinding.ActivityFilmEditBinding
 
 class FilmEditActivity : AppCompatActivity() {
@@ -21,6 +24,11 @@ class FilmEditActivity : AppCompatActivity() {
 
         with(bindings) {
             setContentView(root)
+
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+            actionBar?.setHomeButtonEnabled(true)
+            actionBar?.setDisplayHomeAsUpEnabled(true)
 
             save.setOnClickListener {
                 val dato = Uri.parse("https://www.linkedin.com/in/dianelys-saldana")
@@ -49,4 +57,21 @@ class FilmEditActivity : AppCompatActivity() {
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_film_list, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                NavUtils.navigateUpTo(
+                    this,
+                    Intent(this@FilmEditActivity, FilmListActivity::class.java)
+                )
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
 }
