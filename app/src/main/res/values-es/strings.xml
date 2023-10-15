@@ -53,4 +53,7 @@
 
     <string name="chooseGenre">Elige el género</string>
     <string name="chooseFormat">Elige el formato</string>
+
+    <string name="addFilm">Añadir película</string>
+    <string name="aboutApp">Acerca de</string>
 </resources>

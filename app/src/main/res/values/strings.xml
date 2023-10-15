@@ -53,4 +53,7 @@
 
     <string name="chooseGenre">Choose the genre</string>
     <string name="chooseFormat">Choose the format</string>
+
+    <string name="addFilm">Add film</string>
+    <string name="aboutApp">About</string>
 </resources>

@@ -6,9 +6,9 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
 import android.os.Bundle
-import android.widget.Toast
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import es.ua.eps.filmoteca.databinding.ActivityFilmListBinding
 
@@ -54,4 +54,27 @@ class FilmListActivity : AppCompatActivity() {
 
         }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_film_list, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_add_film -> {
+                val intent = Intent(this@FilmListActivity, FilmEditActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.action_about -> {
+                // Handle "About" menu item click
+                val intent = Intent(this@FilmListActivity, AboutActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
+
 }
