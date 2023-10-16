@@ -56,4 +56,7 @@
 
     <string name="addFilm">Añadir película</string>
     <string name="aboutApp">Acerca de</string>
+
+    <string name="newFilm">Nueva película</string>
+    <string name="newDir">Director</string>
 </resources>

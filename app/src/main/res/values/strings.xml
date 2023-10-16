@@ -56,4 +56,7 @@
 
     <string name="addFilm">Add film</string>
     <string name="aboutApp">About</string>
+
+    <string name="newFilm">New film</string>
+    <string name="newDir">Director</string>
 </resources>
