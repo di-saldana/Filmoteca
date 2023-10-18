@@ -10,6 +10,10 @@ import android.widget.AdapterView
 import android.widget.ListView
 
 class FilmListFragment : Fragment() {
+    interface OnItemSelectedListener {
+        fun onItemSelected(position: Int)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -25,11 +29,12 @@ class FilmListFragment : Fragment() {
 
         listView.setOnItemClickListener { parent: AdapterView<*>, view: View, position: Int, id: Long ->
             // TODO: Implementar luego
+            if (activity is OnItemSelectedListener) {
+                // Call the onItemSelected method of the hosting activity (MainActivity)
+                (activity as OnItemSelectedListener).onItemSelected(position)
+            }
         }
 
         return view
     }
 }
-
-
-

@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/poster" />
 
     <LinearLayout
-        android:id="@+id/boxLayout"
+        android:id="@+id/boxLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -98,7 +98,7 @@
         android:id="@+id/buttonLayout"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_below="@+id/boxLayout"
+        android:layout_below="@+id/boxLayout2"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="25dp"
         android:layout_marginStart="10dp"
