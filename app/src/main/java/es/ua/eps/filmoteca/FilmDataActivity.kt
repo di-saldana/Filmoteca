@@ -4,9 +4,6 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import androidx.core.app.NavUtils
 import es.ua.eps.filmoteca.databinding.ActivityFilmDataBinding
 
 class FilmDataActivity : AppCompatActivity() {
@@ -19,12 +16,6 @@ class FilmDataActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        actionBar?.setHomeButtonEnabled(true)
-        actionBar?.setDisplayHomeAsUpEnabled(true)
-
         bindings = ActivityFilmDataBinding.inflate(layoutInflater)
         with(bindings) {
             setContentView(root)
@@ -63,24 +54,6 @@ class FilmDataActivity : AppCompatActivity() {
                 mainIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 startActivity(mainIntent)
             }
-        }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_film_list, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> {
-                NavUtils.navigateUpTo(
-                    this,
-                    Intent(this@FilmDataActivity, FilmListActivity::class.java)
-                )
-                return true
-            }
-            else -> return super.onOptionsItemSelected(item)
         }
     }
 }

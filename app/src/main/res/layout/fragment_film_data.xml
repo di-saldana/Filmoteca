@@ -1,43 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:layout_height="match_parent"
+    android:id="@+id/filmDataContainer">
 
     <ImageView
         android:id="@+id/poster"
         android:layout_width="130dp"
         android:layout_height="200dp"
         android:layout_alignParentStart="true"
-        android:layout_margin="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:contentDescription="@string/contentDescr"
         android:scaleType="centerCrop"
         android:src="@drawable/poster"
-        app:srcCompat="@drawable/poster" />
+        android:layout_margin="30dp"/>
 
     <LinearLayout
         android:id="@+id/boxLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="5dp"
         android:layout_toEndOf="@+id/poster"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignTop="@+id/poster">
 
         <TextView
             android:id="@+id/details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="16dp"
-            android:layout_toEndOf="@+id/poster"
             android:text="@string/p1Title"
             android:textSize="18sp" />
 
@@ -45,70 +35,53 @@
             android:id="@+id/director"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/details"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
-            android:layout_toEndOf="@+id/poster"
             android:text="@string/p1Dir" />
 
         <TextView
             android:id="@+id/year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/director"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
-            android:layout_toEndOf="@+id/poster"
             android:text="@string/p1YearText" />
 
         <TextView
             android:id="@+id/genre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/year"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
-            android:layout_toEndOf="@+id/poster"
             android:text="@string/p1GenreText" />
 
         <TextView
             android:id="@+id/format"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/genre"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
-            android:layout_toEndOf="@+id/poster"
             android:text="@string/p1FormatText" />
-
-        <Button
-            android:id="@+id/imdb"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/format"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="15dp"
-            android:layout_toEndOf="@+id/poster"
-            android:text="@string/p1ImdbText"
-            android:lines="2"/>
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/imdb"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/p1ImdbText"
+        android:lines="2"
+        android:layout_toEndOf="@+id/poster"
+        android:layout_below="@+id/boxLayout" />
 
     <LinearLayout
         android:id="@+id/buttonLayout"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/boxLayout"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="10dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imdb"
+        android:orientation="horizontal"
+        android:layout_margin="35dp">
 
         <Button
             android:id="@+id/main"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="200dp"
             android:text="@string/main"
             android:lines="2"/>
 
@@ -117,9 +90,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginBottom="200dp"
-            android:lines="2"
-            android:text="@string/edit" />
+            android:text="@string/edit"
+            android:lines="2"/>
     </LinearLayout>
-
 </RelativeLayout>

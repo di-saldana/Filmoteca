@@ -4,9 +4,6 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import androidx.core.app.NavUtils
 import es.ua.eps.filmoteca.databinding.ActivityAboutBinding
 
 class AboutActivity : AppCompatActivity() {
@@ -19,11 +16,6 @@ class AboutActivity : AppCompatActivity() {
         bindings = ActivityAboutBinding.inflate(layoutInflater)
         with(bindings) {
             setContentView(root)
-
-            supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-            actionBar?.setHomeButtonEnabled(true)
-            actionBar?.setDisplayHomeAsUpEnabled(true)
 
             webButton.setOnClickListener {
                 // Toast.makeText(this@AboutActivity, R.string.toast, Toast.LENGTH_LONG).show()
@@ -58,23 +50,4 @@ class AboutActivity : AppCompatActivity() {
             }
         }
     }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_film_list, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            android.R.id.home -> {
-                NavUtils.navigateUpTo(
-                    this,
-                    Intent(this@AboutActivity, FilmListActivity::class.java)
-                )
-                return true
-            }
-            else -> return super.onOptionsItemSelected(item)
-        }
-    }
-
 }
